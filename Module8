@@ -1,0 +1,51 @@
+#1
+def bubblesort(unsorted):
+    for i in range(len(unsorted)):
+        for j in range(0,len(unsorted) - i-1):
+            if unsorted[j] > unsorted[j+1]:
+                temp= unsorted[j]
+                unsorted[j] = unsorted[j+1]
+                unsorted[j+1] = temp
+    return unsorted
+def binarysearch(alist):
+    first = 0
+    last = len(alist)-1
+    for i in range(first,last):
+        count = 0
+        test = alist[i]
+        for j in range(0,len(alist)):
+            if test == alist[j]:
+                count = count+1
+        if count >=2:
+            print (test, 'occurred',count, 'times')
+
+    
+def main():
+    size = int(input("How many friends do you want to list?"))
+    arr =[None]* size
+    print (arr)
+    for x in range(0,size):
+        arr[x] = str(input())
+    print (arr)
+    sorted = bubblesort(arr)
+    print (sorted)
+    binarysearch(arr)
+main()
+
+#2
+def main():
+    
+    rows= int(input("How many rows?"))
+    items = int(input("How many items for each row?"))
+    arr = [[None]*rows]*items
+    for r in range(0,rows):
+        for c in range(0,items):
+            arr[r][c] = str(input("Enter the item you want."))
+    print (arr)
+def hidemoney(array):
+    for i in range(0,len(array)):
+        for j in range(len(array)):
+            i = int(input("Which row do you want to hide your money?"))
+            j = int(input("Which item do you want to hide your money?"))
+            array[i][j] = temp
+main()
